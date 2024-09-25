@@ -66,6 +66,9 @@ public class BankAplication {
                 case 9:
                     System.out.println("Thanks for using our services. Bye!👍");
                     break;
+
+                default:
+                    System.out.println("Option not valid. Please try again.");
             }
         }
 
