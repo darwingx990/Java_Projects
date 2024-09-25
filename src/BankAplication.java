@@ -46,6 +46,11 @@ public class BankAplication {
                 case 2:
                     System.out.println("How much money do you want to withdraw? ");
                     double amountWithdrwawal = sc.nextDouble();
+
+                    if (amountWithdrwawal > amount) {
+                        System.out.println("Insufficient Funds! Please try again \n");
+                        break;
+                    }
                     amount -= amountWithdrwawal;
                     System.out.println("Mr %S, You have withdrawed $ %.2f. The remaining balance on the account is $ %.2f \n".formatted(name, amountWithdrwawal, amount));
                     break;
