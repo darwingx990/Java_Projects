@@ -5,6 +5,23 @@ public class Song extends Audio{
     private String artist;
     private String genre;
 
+    @Override
+    public int getClassification() {
+        if (getLikes()>0 && getLikes() <= 100) {
+            return 1;
+        } else if (getLikes() <= 500) {
+            return 2;
+        } else if (getLikes() <= 1000) {
+            return 3;
+        } else if (getLikes() <= 5000) {
+            return 4;
+        } else if (getLikes() > 5000) {
+            return 5;
+        } else {
+            return 0;
+        }
+    }
+
     public String getAlbum() {
         return album;
     }

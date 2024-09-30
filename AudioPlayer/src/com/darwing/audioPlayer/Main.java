@@ -1,19 +1,21 @@
 package com.darwing.audioPlayer;
 
+import com.darwing.audioPlayer.models.Playlist;
 import com.darwing.audioPlayer.models.Podcast;
 import com.darwing.audioPlayer.models.Song;
 
 public class Main {
     public static void main(String[] args) {
+        Playlist playlist = new Playlist();
         Song loveYouPiece = new Song();
+
         loveYouPiece.setTittle("Love You Piece");
         loveYouPiece.setArtist("Emekus");
         loveYouPiece.setGenre("Romance");
         loveYouPiece.setAlbum("I love you. ");
-        for (int i = 0; i < 1680; i++) {
+        for (int i = 0; i < 80; i++) {
             loveYouPiece.iLike();
         }
-
         for (int i = 0; i < 6854; i++) {
             loveYouPiece.play();
         }
@@ -30,7 +32,7 @@ public class Main {
             englishLearn.play();
         }
 
-        System.out.println(englishLearn.toString() +"\n" +  loveYouPiece.toString() + "\n" + englishLearn.toString());
+        System.out.println(loveYouPiece.toString() + playlist.myFavourites(loveYouPiece) + "\n" + englishLearn.toString() + playlist.myFavourites(englishLearn));
     }
 
 
